@@ -1,3 +1,3 @@
-import {character, characterHealth} from './charHealth';
+import { character, characterHealth } from './charHealth';
 
-characterHealth(character)
+characterHealth(character);
