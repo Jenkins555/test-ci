@@ -3,11 +3,14 @@ export const character = {
   health: 90,
 };
 
-export function characterHealth() {
-  if (this.health < 30) {
-    return 'critical';
-  } if (this.health < 70) {
-    return 'wounded';
+export function characterHealth(obj) {
+  let heroHealths = '';
+  if (obj.health < 30) {
+    heroHealths = 'critical';
+  } else if (obj.health < 70) {
+    heroHealths = 'wounded';
+  } else if (obj.health < 100) {
+    heroHealths = 'healthy';
   }
-  return 'healthy';
+  return heroHealths;
 }
